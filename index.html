@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Demo of jzoom</title>
+    
+    <link href="css/jzoom.css" media="screen" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jzoom.js"></script>
+    <script type="text/javascript">
+      // Document ready
+      jQuery(function ($) {
+        // Create large for all img have class zoom
+        $('img.zoom').jzoom({
+          largeImg: 'dummy_images/mr_Ban_large.jpg',
+          viewArea: [100,100],
+          coordinates: [
+            {
+              position: [350,150, 400,200],
+              title: 'Mat nai',
+              description: 'Mat nai cha cha cha'
+            },
+            {
+              position: [400,250, 500,300],
+              title: 'Mieng mom',
+              description: 'Cai mieng cuoi duyen ;)'
+            },
+            {
+              position: [150,250, 200, 350],
+              title: 'Goc ban',
+              description: 'Goc ban nay xau qua =))'
+            }
+          ]
+        });
+      })
+    </script>
+  </head>
+  <body>
+    <img src="dummy_images/mr_Ban.jpg" class="zoom" />
+  </body>
+</html>
